@@ -9,18 +9,69 @@ html, body {
     padding: 10;
 }
 
+/* .highlight {
+    color: yellow;
+  } */
+
 body{
     /* height: 100vh; */
-    background: linear-gradient(111.34deg,#B266FF 7.25%, #D0EBF0 90.66%);
+    background: linear-gradient(111.34deg,#1a759f 7.25%, #99d98c 90.66%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0;
 }
 
 .certificate{
     background: linear-gradient(111.34deg,#4FCFF8 7.25%, #D0EBF0 90.66%);
 }
 
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* Adjust the alpha channel for transparency */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border to enhance the glass effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow for depth */
+  transition: transform 0.3s ease-in-out;
+}
+
+.glass-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent 70%); /* Adjust the gradient as needed */
+  z-index: -1;
+}
+
+.glass-card:hover {
+  transform: scale(1.05); /* Add a scale effect on hover for interactivity */
+}
+
+.accordion {
+  box-shadow: none;
+}
+
+.accordion-button {
+  color: black !important;
+}
+
+.accordion-card {
+  border: none;
+}
+
+/* Style for the accordion header */
+.accordion-button {
+  background: linear-gradient(111.34deg, #1a759f 7.25%, #99d98c 90.66%);
+  color: #fff; /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for the accordion body */
+.accordion-body {
+  background: linear-gradient(111.34deg, #1a759f 7.25%, #99d98c 90.66%);
+   /* Remove top border to avoid double border with accordion header */
+}
 
 .carousel {
     width: 100vw;
@@ -88,3 +139,4 @@ body{
   .carousel-button.next {
     right: 1rem;
   }
+  
